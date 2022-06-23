@@ -7,9 +7,9 @@ from ..Config import Config
 ROZ_PIC = "https://telegra.ph/file/5f6ef13851dcf0d6fc72b.jpg"
 RAZAN = Config.TG_BOT_USERNAME
 ROZ_T = (
-    f"**⌯︙بوت جمثـون يعمل بنجاح 🤍،**\n"
+    f"**⌯︙ السورس الخاص بك يعمل بنجاح 🤍،**\n"
     f"**   - اصدار التليثون :** `1.23.0\n`"
-    f"**   - اصدار جمثون :** `4.0.0`\n"
+    f"**   - اصدار سورسك :** `4.0.0`\n"
     f"**   - البوت المستخدم :** `{RAZAN}`\n"
     f"**   - اصدار البايثون :** `3.9.6\n`"
     f"**   - المستخدم :** {mention}\n"
@@ -26,8 +26,8 @@ if Config.TG_BOT_USERNAME is not None and tgbot is not None:
         if query.startswith("السورس") and event.query.user_id == bot.uid:
             buttons = [
                 [
-                    Button.url("قنـاة السـورس ⚙️", "https://t.me/jmthon"),
-                    Button.url("المطـور 👨🏼‍💻", "https://t.me/RR77R"),
+                    Button.url("قنـاة السـورس ⚙️", "https://t.me/jdidoekfk"),
+                    Button.url("المطـور 👨🏼‍💻", "t.me/jwjciosd"),
                 ]
             ]
             if ROZ_PIC and ROZ_PIC.endswith((".jpg", ".png", "gif", "mp4")):
