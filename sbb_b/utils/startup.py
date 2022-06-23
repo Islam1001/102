@@ -73,10 +73,10 @@ async def startupmessage():
         if BOTLOG:
             Config.SBB_BLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/b81fe3118d5a1f987e6e2.jpg",
-                caption="❃ عزيزي المستخدم تم تنصيب سورس جمثون لك بنجاح لمعرفه اوامر السورس؛ \n`.الاوامر`",
+                "https://telegra.ph/file/6ac204daaa3331b3000d6.jpg",
+                caption="🇮🇶 عزيزي المستخدم تم تنصيب السورس الخاص بك بنجاح لمعرفه اوامر السورس ؛ \n`.الاوامر`",
                 buttons=[
-                    (Button.url("مجموعة المساعده", "https://t.me/jmthon_support"),)
+                    (Button.url("المطور", "tg://settings/"),)
                 ],
             )
     except Exception as e:
@@ -115,7 +115,7 @@ async def mybot():
     f"ـ {rz_ment}"
     f"⪼ هذا هو بوت خاص بـ {rz_ment} يمكنك التواصل معه هنا"
     starkbot = await sbb_b.tgbot.get_me()
-    perf = "[ جمثون ]"
+    perf = "[ سورسي ]"
     bot_name = starkbot.first_name
     botname = f"@{starkbot.username}"
     if bot_name.endswith("Assistant"):
@@ -199,15 +199,15 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("@jmthon"))
+        await sbb_b(JoinChannelRequest("@hasoni_lq"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@RR7PP"))
+        await sbb_b(JoinChannelRequest("@aauua"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@RR9R4"))
+        await sbb_b(JoinChannelRequest("@rekhso"))
     except BaseException:
         pass
 
@@ -242,10 +242,10 @@ async def verifyLoggerGroup():
                 "حدث خطأ عند محاولة التحقق من فار PRIVATE_GROUP_BOT_API_ID.\n" + str(e)
             )
     else:
-        descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
-        photobt = await sbb_b.upload_file(file="razan/razan/Jmthonp.jpg")
+        descript = " هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  ."
+        photobt = await sbb_b.upload_file(file="razan/razan/Sourcep.jpg")
         _, groupid = await create_supergroup(
-            "كروب بوت جمثون", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
+            "كروب السورس الخاص بك", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
         addgvar("PRIVATE_GROUP_BOT_API_ID", groupid)
         print(
@@ -273,8 +273,8 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error("حدث خطأ اثناء التعرف على فار PM_LOGGER_GROUP_ID.\n" + str(e))
     else:
-        descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
-        photobt = await sbb_b.upload_file(file="razan/razan/Jmthonp.jpg")
+        descript = "لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
+        photobt = await sbb_b.upload_file(file="razan/razan/Sourcep.jpg")
         _, groupid = await create_supergroup(
             "مجموعة التخزين", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
