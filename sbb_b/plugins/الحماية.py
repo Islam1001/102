@@ -407,7 +407,7 @@ async def do_pm_spam_action(event, chat):
         return
 
 
-# ترجمه وكتابة فريق جمثون
+# ترجمه وكتابة وخمط فريق جمثون
 @sbb_b.ar_cmd(incoming=True, func=lambda e: e.is_private, edited=False, forword=None)
 async def on_new_private_message(event):
     if gvarstatus("pmpermit") is None:
@@ -417,9 +417,9 @@ async def on_new_private_message(event):
         return
     if pmpermit_sql.is_approved(chat.id):
         return
-    if event.chat_id == 5129889412:
-        await event.client.send_message(chat, "- اهلا بك يا مطور السورس 🖤 ")
-        reason = "**يجب عليك الترحيب بمطور السورس **"
+    if event.chat_id == 668571162:
+        await event.client.send_message(chat, "- اهلا بك يا Hasoni Alnajar 🖤 ")
+        reason = "**يجب عليك الترحيب له **"
         try:
             PM_WARNS = sql.get_collection("pmwarns").json
         except AttributeError:
@@ -471,7 +471,7 @@ async def you_dm_other(event):
             f"{cmdhd}س",
             f"{cmdhd}ر",
             f"{cmdhd}سماح",
-        )  # ترجمه وكتابة فريق جمثون
+        )  # ترجمه وكتابة وخمط فريق جمثون
     ):
         return
     try:
@@ -904,6 +904,6 @@ async def approve_p_m(event):
     await edit_or_reply(
         event,
         APPROVED_PMs,
-        file_name="قائمة الحماية جمثون.txt",
-        caption="قائمة المسموح لهم الحالية\n سورس جمثون العربي \n @jmthon",
+        file_name="قائمة الحماية.txt",
+        caption="قائمة المسموح لهم الحالية",
     )  # ترجمه وكتابة فريق جمثون
