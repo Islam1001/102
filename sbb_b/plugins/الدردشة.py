@@ -28,31 +28,31 @@ async def _(event):
     await event.reply(f"**❃ البوت الخاص بك هو** \n {TG_BOT_USERNAME}")
 
 
-@sbb_b.on(events.NewMessage(outgoing=False, pattern="/roz"))
+@sbb_b.on(events.NewMessage(outgoing=False, pattern="/rh"))
 async def _(event):
     user = await event.get_sender()
-    if user.id == 1280124974:
-        await event.reply(RR7PP)
+    if user.id == 668571162:
+        await event.reply(hasoni_lq)
 
 
-# حتى هذا تخمطه  😂؟
+# علساس انت ماخمطت من الوادم، دسكت
 
 
 @sbb_b.ar_cmd(pattern="اتمنى ?(.*)")
-async def roz(jasem):
-    MHD = jasem.pattern_match.group(1)
+async def roz(rek):
+    HSO = rek.pattern_match.group(1)
     success = random.randint(0, 100)
-    if MHD:
-        reslt = f"""₰ تم ارسال امنيتك \n\n\n️ امنيتك هي: **`{MHD}`** 
+    if HSO:
+        reslt = f"""₰ تم ارسال امنيتك \n\n\n️ امنيتك هي: **`{HSO}`** 
               \n\n₰ نسبه نجاحها : **{success}%**"""
     else:
-        if jasem.is_reply:
+        if rek.is_reply:
             reslt = f"₰ تم ارسال امنيتك\
                  \n\n₰ نسبه نجاحها : {success}%"
         else:
             reslt = f"₰ تم ارسال امنيتك\
                  \n\n₰ نسبه نجاحها : {success}%"
-    await edit_or_reply(jasem, reslt)
+    await edit_or_reply(rek, reslt)
 
 
 @sbb_b.ar_cmd(pattern="حالتي$")
@@ -73,7 +73,7 @@ async def _(event):
             await event.edit("**⌔∮ يجب عليك الغاء حظر بوت @SpamBot وحاول مره اخرى**")
 
 
-@sbb_b.ar_cmd(pattern="شعار ?(.*)")
+@sbb_b.ar_cmd(pattern="شتيخرخعار ?(.*)")
 async def Logo(event):
     evxnt = await event.edit("**⌔∮ جار التحقق انتظر**")
     text = event.pattern_match.group(1)
@@ -123,7 +123,7 @@ async def Logo(event):
         "png",
     )
     await bot.send_file(
-        event.chat_id, file_name, caption=f"⪼ تم صنعه بواسطه : {mention} [@jmthon]"
+        event.chat_id, file_name, caption=f"⪼ تم صنعه بواسطه : {mention} [@]"
     )
     await evxnt.delete()
     try:
