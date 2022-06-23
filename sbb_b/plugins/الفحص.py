@@ -31,8 +31,8 @@ async def amireallyalive(event):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
-    EMOJI = gvarstatus("ALIVE_EMOJI") or "  ✥ "
-    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "₰ [𝙟𝙢𝙩𝙝𝙤𝙣 𝙖𝙧𝙖𝙗𝙞𝙘 𝙪𝙨𝙚𝙧𝙗𝙤𝙩](t.me/jmthon) ₰"
+    EMOJI = gvarstatus("ALIVE_EMOJI") or "  🇮🇶 "
+    ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "| **السورس الخاص بك** |"
     sbb_b_IMG = gvarstatus("ALIVE_PIC")
     sbb_b_caption = gvarstatus("ALIVE_TEMPLATE") or temp
     caption = sbb_b_caption.format(
@@ -57,7 +57,7 @@ async def amireallyalive(event):
         except (WebpageMediaEmptyError, MediaEmptyError, WebpageCurlFailedError):
             return await edit_or_reply(
                 sbb_bevent,
-                f"**⌔∮ عليك استخدام رابط تليجراف لا يمكن استخدام اي رابط ثاني واعد استخدام الامر  ⪼  `.اضف صورة الحماية` <بالرد على الرابط> ",
+                f"**عليك استخدام رابط تليجراف لا يمكن استخدام اي رابط ثاني واعد استخدام الامر  ⪼  `.اضف صورة الحماية` <بالرد على الرابط> ",
             )
     else:
         await edit_or_reply(
@@ -67,12 +67,12 @@ async def amireallyalive(event):
 
 
 temp = """{ALIVE_TEXT}
+**{EMOJI} مطــور الســـورس :** {mention}
 **{EMOJI} قاعدۿ البيانات :** `{dbhealth}`
 **{EMOJI} أصـدار التـيليثون :** `{telever}`
-**{EMOJI} أصـدار جـمثون :** `{jmver}`
-**{EMOJI} الوقت:** `{uptime}` 
-**{EMOJI} أصدار البـايثون :** `{pyver}`
-**{EMOJI} المسـتخدم:** {mention}"""
+**{EMOJI} أصـدار السورس :** `{jmver}`
+**{EMOJI} الوقت :** `{uptime}` 
+**{EMOJI} أصدار البـايثون :** `{pyver}` """
 
 
 
@@ -81,7 +81,7 @@ from telethon import events
 from telethon import version
 from platform import python_version
 
-@sbb_b.ar_cmd(pattern="جمثون$")
+@sbb_b.ar_cmd(pattern="بنىمخثخلي$")
 async def _(event):
     await event.delete()
     jmthonget = await event.get_sender()
