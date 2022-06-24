@@ -61,7 +61,7 @@ async def _(event):
 async def get_users(event):
     legen_ = event.text[10:]
     sbb_b_chat = legen_.lower
-    restricted = ["@super_jmthon", "@jmthon_support"]
+    restricted = ["@sdijrdyuthg2tngrir", "@kygktdonjfkifdcjtd5rt"]
     SBB_B = await edit_or_reply(event, f"**جارِ اضأفه الاعضاء من  ** {legen_}")
     if sbb_b_chat in restricted:
         return await SBB_B.edit(
