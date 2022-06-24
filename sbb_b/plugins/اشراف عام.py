@@ -1,5 +1,4 @@
-#    جميع الحقوق محفوظة كتابة وتعديل  :   @RR7PP
-#    اخمط مع ذكر الحقوق غيرها انت مطور فاشل
+#    هو انتو كلشي خامطيه من الاجانب ومن سورسات العرب البقيه
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights, MessageEntityMentionName
 
