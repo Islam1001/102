@@ -26,7 +26,7 @@ async def _(event):
             return await edit_or_reply(event, "- هذا نص غير صحيح")
         text = input_str
         lan = "ar"
-    sbb_bevent = await edit_or_reply(event, "⌔∮ جـار التسجيل انتـظر قليلا")
+    sbb_bevent = await edit_or_reply(event, " جـار التسجيل انتـظر قليلا")
     text = deEmojify(text.strip())
     lan = lan.strip()
     if not os.path.isdir("./temp/"):
