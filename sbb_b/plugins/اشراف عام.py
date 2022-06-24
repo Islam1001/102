@@ -31,7 +31,7 @@ async def get_full_user(event):
         try:
             user_obj = await event.client.get_entity(user)
         except Exception as err:
-            return await event.edit("▾∮ هنالك خطأ يرجى تبليغنا @JMTHON", str(err))
+            return await event.edit("هنالك خطأ", str(err))
     return user_obj, extra
 
 
@@ -57,7 +57,7 @@ async def gben(sbb_b):
     i = 0
     await dc.get_sender()
     me = await sbb_b.client.get_me()
-    await razan.edit("▾∮ يتم رفع المستخدم في جميع المجموعات")
+    await razan.edit("يتم رفع المستخدم في جميع المجموعات")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await sbb_b.get_chat()
@@ -71,13 +71,13 @@ async def gben(sbb_b):
     except:
         pass
     if me == user:
-        await razan.edit("▾∮ لا استطيع رفع نفسي 🧸🤍،")
+        await razan.edit(" لا استطيع رفع نفسي")
         return
     try:
         if not rank:
             rank = "ㅤㅤ"
     except:
-        return await razan.edit(f"**▾∮ هنالك شي خطأ**")
+        return await razan.edit(f"**هنالك شي خطأ**")
     if user:
         telchanel = [
             d.entity.id
@@ -96,13 +96,13 @@ async def gben(sbb_b):
             try:
                 await sbb_b.client(EditAdminRequest(x, user, rgt, rank))
                 i += 1
-                await razan.edit(f"**▾∮ يتم الرفع في **: `{i}` من المجموعات")
+                await razan.edit(f"**يتم الرفع في **: `{i}` من المجموعات")
             except:
                 pass
     else:
-        await razan.edit(f"**▾∮ يجب عليك الرد على المستخدم اولا **")
+        await razan.edit(f"**يجب عليك الرد على المستخدم اولا **")
     return await razan.edit(
-        f"**▾∮المستخدم [{user.first_name}](tg://user?id={user.id})\n▾∮ تم رفعه في : {i} من المجموعات**"
+        f"**المستخدم [{user.first_name}](tg://user?id={user.id})\n▾∮ تم رفعه في : {i} من المجموعات**"
     )
 
 
@@ -112,7 +112,7 @@ async def gben(sbb_b):
     i = 0
     await dc.get_sender()
     me = await sbb_b.client.get_me()
-    await razan.edit("**▾∮ يتم تنزيل الشخص من رتبة الاشراف في جميع الكروبات**")
+    await razan.edit("** يتم تنزيل الشخص من رتبة الاشراف في جميع الكروبات**")
     my_mention = "[{}](tg://user?id={})".format(me.first_name, me.id)
     f"@{me.username}" if me.username else my_mention
     await sbb_b.get_chat()
@@ -126,13 +126,13 @@ async def gben(sbb_b):
     except:
         pass
     if me == user:
-        await razan.edit("▾∮ لا استطيع تنزيل نفسي 🧸🤍")
+        await razan.edit("لا استطيع تنزيل نفسي")
         return
     try:
         if not rank:
             rank = "ㅤㅤ"
     except:
-        return await razan.edit(f"**▾∮ هنالك شي خطأ**")
+        return await razan.edit(f"** هنالك شي خطأ**")
     if user:
         telchanel = [
             d.entity.id
@@ -151,11 +151,11 @@ async def gben(sbb_b):
             try:
                 await sbb_b.client(EditAdminRequest(x, user, rgt, rank))
                 i += 1
-                await razan.edit(f"**▾∮ يتم تنزيله في **: `{i}` من المجموعات")
+                await razan.edit(f"** يتم تنزيله في **: `{i}` من المجموعات")
             except:
                 pass
     else:
-        await razan.edit(f"**▾∮ يجب عليك الرد على المستخدم اولا **")
+        await razan.edit(f"** يجب عليك الرد على المستخدم اولا **")
     return await razan.edit(
-        f"**▾∮المستخدم [{user.first_name}](tg://user?id={user.id})\n▾∮ تم تنزيله في : {i} من المجموعات**"
+        f"**المستخدم [{user.first_name}](tg://user?id={user.id})\n▾∮ تم تنزيله في : {i} من المجموعات**"
     )
