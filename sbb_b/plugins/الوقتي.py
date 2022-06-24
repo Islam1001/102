@@ -19,7 +19,7 @@ from ..helpers.utils import _format
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from . import edit_delete, sbb_b, logging
 
-DEFAULTUSERBIO = Config.DEFAULT_BIO or " ﴿ لا تَحزَن إِنَّ اللَّهَ مَعَنا ﴾  "
+DEFAULTUSERBIO = Config.DEFAULT_BIO or "لا إله إلا الله وأشهد أن محمد رسول الله وأشهد أن علي ولي الله |"
 DEFAULTUSER = Config.AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 CHANGE_TIME = int(gvarstatus("CHANGE_TIME")) if gvarstatus("CHANGE_TIME") else 60
@@ -140,9 +140,9 @@ async def _(event):
 @sbb_b.ar_cmd(pattern="بايو وقتي$")
 async def _(event):
     if gvarstatus("autobio") is not None and gvarstatus("autobio") == "true":
-        return await edit_delete(event, "**⪼ البايو الوقتي شغال بالأصل**")
+        return await edit_delete(event, "** البايو الوقتي شغال بالأصل**")
     addgvar("autobio", True)
-    await edit_delete(event, "**⌔∮ تم تفعيل البايو الوقتي بنجاح**")
+    await edit_delete(event, "** تم تفعيل البايو الوقتي بنجاح**")
     await autobio_loop()
 
 
@@ -164,8 +164,8 @@ async def _(event):
                     await event.client.get_profile_photos("me", limit=1)
                 )
             )
-            return await edit_delete(event, "**⌔∮ تم ايقاف الصورة الوقتية بنجاح**")
-        return await edit_delete(event, "**⌔∮ لم يتم تفعيل الصورة الوقتية بالأصل**")
+            return await edit_delete(event, "** تم ايقاف الصورة الوقتية بنجاح**")
+        return await edit_delete(event, "** لم يتم تفعيل الصورة الوقتية بالأصل**")
     if (
         input_str == "اسم وقتي"
         or input_str == "اسم الوقتي"
@@ -177,16 +177,16 @@ async def _(event):
             await event.client(
                 functions.account.UpdateProfileRequest(first_name=DEFAULTUSER)
             )
-            return await edit_delete(event, "**⌔∮ تم ايقاف  الاسم الوقتي بنجاح **")
-        return await edit_delete(event, "**⌔∮ لم يتم تفعيل الاسم الوقتي بالأصل**")
+            return await edit_delete(event, "** تم ايقاف  الاسم الوقتي بنجاح **")
+        return await edit_delete(event, "** لم يتم تفعيل الاسم الوقتي بالأصل**")
     if input_str == "بايو وقتي" or input_str == "البايو الوقتي":
         if gvarstatus("autobio") is not None and gvarstatus("autobio") == "true":
             delgvar("autobio")
             await event.client(
                 functions.account.UpdateProfileRequest(about=DEFAULTUSERBIO)
             )
-            return await edit_delete(event, "**⪼ تم ايقاف البايو الوقتي بنجاح 𓆰**")
-        return await edit_delete(event, "**⌔∮ لم يتم تفعيل البايو الوقتي**")
+            return await edit_delete(event, "** تم ايقاف البايو الوقتي بنجاح **")
+        return await edit_delete(event, "** لم يتم تفعيل البايو الوقتي**")
     END_CMDS = [
         "الصورة الوقتية",
         "الصورة الوقتيه",
@@ -205,7 +205,7 @@ async def _(event):
     if input_str not in END_CMDS:
         await edit_delete(
             event,
-            f"⌔∮ عذرا يجب استخدام الامر بشكل صحيح",
+            f" عذرا يجب استخدام الامر بشكل صحيح",
             parse_mode=_format.parse_pre,
         )
 
