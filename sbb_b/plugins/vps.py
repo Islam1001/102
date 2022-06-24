@@ -19,7 +19,7 @@ cmds = [
 @sbb_b.ar_cmd(pattern="(ري|رست)لود$")
 async def _(event):
     cmd = event.pattern_match.group(1)
-    sbb_b = await edit_or_reply(event, "**⌔∮ انتظر من 2-3 دقائق**")
+    sbb_b = await edit_or_reply(event, "**انتظر من 2-3 دقائق**")
     if cmd == "رست":
         for file in exts:
             removing = glob.glob(f"./*.{file}")
