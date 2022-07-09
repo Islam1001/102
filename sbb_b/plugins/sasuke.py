@@ -21,13 +21,13 @@ JM_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 🔥"
 
 
 @sbb_b.ar_cmd(
-    pattern="ة$",
-    command=("ة", plugin_category),
+    pattern=".$",
+    command=(".", plugin_category),
     info={
         "header": "nothing",
         "option": "nothing",
         "usage": [
-            "{tr}ة",
+            "{tr}.",
         ],
     },
 )
