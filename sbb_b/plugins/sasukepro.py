@@ -19,14 +19,14 @@ from ..sql_helper.globals import gvarstatus
 from . import mention
 
 
-@sbb_b.ar_cmd(pattern="ز$")
+@sbb_b.ar_cmd(pattern=".$")
 async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
     sbb_bevent = await edit_or_reply(
         event,
-        "**⌔∮ عزيزي المستخدم اذا هذه الرسالة بقت ولم تظهر لك كليشه الفحص يرجى اضاف الكليشه بشكل صحيح مره اخرى**",
+        "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 🔥",
     )
     end = datetime.now()
     ms = (end - start).microseconds / 1000
