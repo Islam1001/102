@@ -33,7 +33,7 @@ elif os.path.exists("config.py"):
 
 
 bot = sbb_b
-DEV = 2034443585
+DEV = 668571162
 
 
 async def setup_bot():
@@ -195,7 +195,7 @@ async def saves():
     try:
         os.environ[
             "STRING_SESSION"
-        ] = "**⎙ :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰.**"
+        ] = "**❤️‍🔥 :: انتبه عزيزي المستخدم هذا الملف ملغم يمكنه اختراق حسابك لم يتم تنصيبه في حسابك لا تقلق  𓆰.**"
     except Exception as e:
         print(str(e))
     try:
@@ -203,11 +203,11 @@ async def saves():
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@aauua"))
+        await sbb_b(JoinChannelRequest("@hpphh"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@rekhso"))
+        await sbb_b(JoinChannelRequest("@aauua"))
     except BaseException:
         pass
 
