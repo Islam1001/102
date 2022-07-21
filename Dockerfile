@@ -1,7 +1,7 @@
-FROM rekhso/hsorek:slim-buster
+FROM clipesr/e:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/rekhso/hsorek.git /root/sbb_b
+RUN git clone https://github.com/clipesr/e.git /root/sbb_b
 #working directory 
 WORKDIR /root/sbb_b
 
