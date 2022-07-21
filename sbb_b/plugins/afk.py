@@ -61,7 +61,7 @@ async def set_not_afk(event):
     ):
         shite = await event.client.send_message(
             event.chat_id,
-            "**الان اعمل بشكل طبيعي\nلقد كان امر السيلب مفعل منذ**" + endtime + ".",
+            "**Now I'm Back**" + endtime + ".",
         )
         AFK_.USERAFK_ON = {}
         AFK_.afk_time = None
@@ -71,8 +71,8 @@ async def set_not_afk(event):
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID,
-                "⌔∮ انتهاء امر السليب \n"
-                + "**⌔∮ تم تعطيله والرجوع للوضع الطبيعي كان مفعل لـ"
+                "I'm Back."
+                + "."
                 + endtime
                 + "**",
             )
@@ -114,7 +114,7 @@ async def on_afk(event):
             if AFK_.reason:
                 message_to_reply = f"انا الان في وضعيه عدم الاتصال منذ\n`{endtime}`\nالسبب : {AFK_.reason}"
             else:
-                message_to_reply = f"انا الان في وضعيه عدم الاتصال منذ\n`{endtime}`"
+                message_to_reply = f"I'm hidden right now."
             if event.chat_id:
                 msg = await event.reply(message_to_reply, file=AFK_.media_afk.media)
         elif AFK_.afk_type == "text":
@@ -123,7 +123,7 @@ async def on_afk(event):
             elif AFK_.reason:
                 message_to_reply = f"انا الان في وضعيه عدم الاتصال منذ .\n\n{endtime}\nالسبب : {AFK_.reason}"
             else:
-                message_to_reply = f"انا الان في وضعيه عدم الاتصال منذ.\n\n{endtime}"
+                message_to_reply = f"I'm hidden right now."
             if event.chat_id:
                 msg = await event.reply(message_to_reply)
         if event.chat_id in AFK_.last_afk_message:
