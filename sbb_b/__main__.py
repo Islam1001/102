@@ -1,3 +1,4 @@
+import contextlib
 import sys
 
 import sbb_b
@@ -30,9 +31,9 @@ except Exception as e:
     sys.exit()
 
 # try:
-# LOGS.info("يتم تفعيل جمثون")
+# LOGS.info("يتم تفعيل السورس")
 # sbb_b.loop.run_until_complete(love())
-# LOGS.info("تم تفعيل جمثون")
+# LOGS.info("تم تفعيل السورس")
 # except Exception as meo:
 #  LOGS.error(f"- {meo}")
 
@@ -57,10 +58,10 @@ async def startup_process():
     await load_plugins("plugins")
     await load_plugins("assistant")
     print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
-    print("تم الان بنجاح اكتمال تنصيب بوت جمثون !!!")
+    print("تم الان بنجاح اكتمال تنصيب السورس !!!")
     print(
         f"مبروك الان اذهب في التلجرام و ارسل {cmdhr}الاوامر لرؤية اذا كان البوت شغال\
-        \n اذا احتجت مساعده اذهب الى مجموعه https://t.me/jmthon_support"
+        \n اذا احتجت مساعده دبر روحك"
     )
     print("➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖")
     await verifyLoggerGroup()
@@ -72,10 +73,9 @@ async def startup_process():
 
 
 sbb_b.loop.run_until_complete(startup_process())
-if len(sys.argv) not in (1, 3, 4):
-    sbb_b.disconnect()
-else:
-    try:
+
+if len(sys.argv) in {1, 3, 4}:
+    with contextlib.suppress(ConnectionError):
         sbb_b.run_until_disconnected()
-    except ConnectionError:
-        pass
+else:
+    sbb_b.disconnect()
