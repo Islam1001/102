@@ -14,7 +14,7 @@ from ..helpers.utils import _sbb_butils
 from ..sql_helper.globals import addgvar, delgvar, gvarstatus
 from . import BOTLOG, BOTLOG_CHATID
 
-TKRAR = Config.TKRAR or "مكرر"
+TKRAR = Config.TKRAR or "مجفص"
 
 async def spam_function(event, RR7PP, sbb_b, sleeptimem, sleeptimet, DelaySpam=False):
 
@@ -265,7 +265,7 @@ async def tmeme(event):
             )
 
 
-@sbb_b.ar_cmd(pattern="ايقاف التكرار ?(.*)")
+@sbb_b.ar_cmd(pattern="ايقاف الجفاص ?(.*)")
 async def stopspamrz(event):
     if gvarstatus("spamwork") is not None and gvarstatus("spamwork") == "true":
         delgvar("spamwork")
