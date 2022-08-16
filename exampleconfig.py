@@ -11,7 +11,6 @@ class Development(Config):
     TG_BOT_TOKEN = "توكن بوتك"
     TG_BOT_USERNAME = "معرف بوتك بدون @"
     PRIVATE_GROUP_BOT_API_ID = -100
-    COMMAND_HAND_LER = "."
     SUDO_USERS = []
     SUDO_COMMAND_HAND_LER = "،"
     TZ = "Asia/Baghdad"
