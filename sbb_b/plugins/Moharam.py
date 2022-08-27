@@ -35,13 +35,14 @@ JM_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔"
 @sbb_b.ar_cmd(pattern="ا ?(.*)")
 
     ms = (end - start).microseconds / 1000
+    async def roz(rek):
     HSO = rek.pattern_match.group(1)
     if HSO:
         caption = f"<b><i>{JM_TXT}<i><b>\n<code> 𝖉𝖊𝖛 ︙ @HssHH\n {HSO}"
         await event.client.send_file(
             event.chat_id,
             PING_PIC,
-            caption=HSO,
+            caption=caption,
             parse_mode="html",
             reply_to=reply_to_id,
             link_preview=False,
