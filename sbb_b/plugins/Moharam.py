@@ -34,16 +34,6 @@ JM_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔"
 
 @sbb_b.ar_cmd(pattern=". ?(.*)")
 
-async def _(event):
-    if event.fwd_from:
-        return
-    reply_to_id = await reply_id(event)
-    start = datetime.now()
-    cat = await edit_or_reply(
-        event, "<b><i>  𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔  </b></i>", "html"
-    )
-    end = datetime.now()
-    await cat.delete()
     ms = (end - start).microseconds / 1000
     HSO = rek.pattern_match.group(1)
     if HSO:
