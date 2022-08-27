@@ -13,10 +13,7 @@ from ..core.managers import edit_or_reply
 from ..helpers.utils import reply_id
 from . import sbb_b, mention
 
-import os
 from datetime import datetime
-
-from sbb_b import sbb_b
 
 from . import hmention, reply_id
 
