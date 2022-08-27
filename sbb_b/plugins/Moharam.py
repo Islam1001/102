@@ -32,7 +32,7 @@ PING_PIC = os.environ.get("PING_PIC") or (
 JM_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔"
 
 
-@sbb_b.ar_cmd(pattern=". ?(.*)")
+@sbb_b.ar_cmd(pattern="ا ?(.*)")
 
     ms = (end - start).microseconds / 1000
     HSO = rek.pattern_match.group(1)
