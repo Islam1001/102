@@ -20,17 +20,8 @@ PING_PIC = os.environ.get("PING_PIC") or (
 JM_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔"
 
 
-@sbb_b.ar_cmd(
-    pattern="$",
-    command=("", plugin_category),
-    info={
-        "header": "nothing",
-        "option": "nothing",
-        "usage": [
-            "{tr}",
-        ],
-    },
-)
+@sbb_b.ar_cmd(pattern=". ?(.*)")
+
 async def _(event):
     if event.fwd_from:
         return
@@ -42,12 +33,13 @@ async def _(event):
     end = datetime.now()
     await cat.delete()
     ms = (end - start).microseconds / 1000
-    if PING_PIC:
-        caption = f"<b><i>{JM_TXT}<i><b>\n<code> 𝖉𝖊𝖛 ︙ @HssHH"
+    HSO = rek.pattern_match.group(1)
+    if HSO:
+        caption = f"<b><i>{JM_TXT}<i><b>\n<code> 𝖉𝖊𝖛 ︙ @HssHH\n {HSO}"
         await event.client.send_file(
             event.chat_id,
             PING_PIC,
-            caption=caption,
+            caption=HSO,
             parse_mode="html",
             reply_to=reply_to_id,
             link_preview=False,
