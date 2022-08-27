@@ -14,7 +14,7 @@ from ..helpers.utils import reply_id
 from . import sbb_b, mention
 
 chr = Config.COMMAND_HAND_LER
-RR7PP = "اهلا بك محمد مطوري\nقناة السورس:  @jmthon"
+RR7PP = "هلا شونك حسن"
 PICS_STR = []
 
 from sbb_b import sbb_b
