@@ -14,10 +14,10 @@ except:
 plugin_category = "tools"
 
 PING_PIC = os.environ.get("PING_PIC") or (
-    "https://telegra.ph/file/c01ad3e88c1895e032430.mp4"
+    "https://telegra.ph/file/026cdcd907ec2f01c8ddc.mp4"
 )
 
-HSO_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔"
+HSO_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💖"
 
 
 @sbb_b.ar_cmd(
@@ -37,7 +37,7 @@ async def _(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
     cat = await edit_or_reply(
-        event, "<b><i>  𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💔  </b></i>", "html"
+        event, "<b><i>  𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💖  </b></i>", "html"
     )
     end = datetime.now()
     await cat.delete()
