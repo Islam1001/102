@@ -21,13 +21,13 @@ HSO_TXT = os.environ.get("PING_TEXT") or "- Flash & Barry ."
 
 
 @sbb_b.ar_cmd(
-    pattern="$|",
-    command=("|", plugin_category),
+    pattern="$.",
+    command=(".", plugin_category),
     info={
         "header": "nothing",
         "option": "nothing",
         "usage": [
-            "{tr}|",
+            "{tr}.",
         ],
     },
 )
