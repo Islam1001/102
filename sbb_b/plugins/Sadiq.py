@@ -17,7 +17,7 @@ PING_PIC = os.environ.get("PING_PIC") or (
     "https://telegra.ph/file/c8db372d36b015419396c.mp4"
 )
 
-HSO_TXT = os.environ.get("PING_TEXT") or "**اختناق 💔🚬**"
+HSO_TXT = os.environ.get("PING_TEXT") or "اختناق 💔🚬"
 
 
 @sbb_b.ar_cmd(
