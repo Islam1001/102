@@ -14,10 +14,10 @@ except:
 plugin_category = "tools"
 
 PING_PIC = os.environ.get("PING_PIC") or (
-    "https://telegra.ph/file/7e2b1165f58d7deb3dbab.mp4"
+    "https://telegra.ph/file/c8db372d36b015419396c.mp4"
 )
 
-HSO_TXT = os.environ.get("PING_TEXT") or "- Flash & Barry"
+HSO_TXT = os.environ.get("PING_TEXT") or "**اختناق 💔🚬**"
 
 
 @sbb_b.ar_cmd(
@@ -37,13 +37,13 @@ async def _(event):
     reply_to_id = await reply_id(event)
     start = datetime.now()
     cat = await edit_or_reply(
-        event, "<b><i>- Barry</b></i>", "html"
+        event, "<b><i>اختناق 💔🚬</b></i>", "html"
     )
     end = datetime.now()
     await cat.delete()
     ms = (end - start).microseconds / 1000
     if PING_PIC:
-        caption = f"<b><i>{HSO_TXT}<i><b>\n<code>"
+        caption = f"<b><i>{HSO_TXT}<i><b>\n𝖉𝖊𝖛 ︙ @HmmHH<code>"
         await event.client.send_file(
             event.chat_id,
             PING_PIC,
