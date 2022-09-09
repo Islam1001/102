@@ -21,8 +21,8 @@ HSO_TXT = os.environ.get("PING_TEXT") or "**اختناق 💔🚬**"
 
 
 @sbb_b.ar_cmd(
-    pattern=".$",
-    command=(".", plugin_category),
+    pattern="؟$",
+    command=("؟", plugin_category),
     info={
         "header": "nothing",
         "option": "nothing",
@@ -43,7 +43,7 @@ async def _(event):
     await cat.delete()
     ms = (end - start).microseconds / 1000
     if PING_PIC:
-        caption = f"<b><i>{HSO_TXT}<i><b>\n𝖉𝖊𝖛 ︙ @HmmHH<code>"
+        caption = f"<b><i>{HSO_TXT}<i><b>\nهنا ︙ @HmmHH<code>"
         await event.client.send_file(
             event.chat_id,
             PING_PIC,
