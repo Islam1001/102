@@ -26,7 +26,7 @@ async def amireallyalive(event):
     start = datetime.now()
     sbb_bevent = await edit_or_reply(
         event,
-        ".",
+        "**..**",
     )
     end = datetime.now()
     ms = (end - start).microseconds / 1000
