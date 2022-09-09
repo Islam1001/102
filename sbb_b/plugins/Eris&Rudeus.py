@@ -21,8 +21,8 @@ HSO_TXT = os.environ.get("PING_TEXT") or "𝗡𝗘𝗪 𝗦𝗧𝗬𝗟𝗘 💖
 
 
 @sbb_b.ar_cmd(
-    pattern="$",
-    command=("", plugin_category),
+    pattern="متوقف$",
+    command=("متوقف", plugin_category),
     info={
         "header": "nothing",
         "option": "nothing",
