@@ -19,7 +19,7 @@ from ..sql_helper.globals import gvarstatus
 from . import mention
 
 
-@sbb_b.ar_cmd(pattern=".$")
+@sbb_b.ar_cmd(pattern="$")
 async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
