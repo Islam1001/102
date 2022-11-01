@@ -76,7 +76,7 @@ async def startupmessage():
                 "https://telegra.ph/file/6ac204daaa3331b3000d6.jpg",
                 caption="🇮🇶 عزيزي المستخدم تم تنصيب السورس الخاص بك بنجاح لمعرفه اوامر السورس ؛ \n`.الاوامر`",
                 buttons=[
-                    (Button.url("المطور", "tg://settings/"),)
+                    (Button.url("المطور", "t.me/hvvhh"),)
                 ],
             )
     except Exception as e:
@@ -199,15 +199,15 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("@hasoni_lq"))
+        await sbb_b(JoinChannelRequest("@deoou"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@whohso"))
+        await sbb_b(JoinChannelRequest("@aalaal"))
     except BaseException:
         pass
     try:
-        await sbb_b(JoinChannelRequest("@hsshss"))
+        await sbb_b(JoinChannelRequest("@shhuv"))
     except BaseException:
         pass
 
